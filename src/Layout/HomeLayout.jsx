@@ -94,15 +94,15 @@ function HomeLayout({ children }) {
 
 
             <motion.li onMouseMove={handleHover} className="mb-4">
-              <Link
-                to={"/resume"}
+              <a
+                // to={"/resume"}
                 href={"https://drive.google.com/file/d/1FO2lrB0-5tclNrm-AidszGTjwKcTEFLm/view?usp=drive_link"}
                 className="text-8xl leading-none text-[#fefffa] font-anton tracking-widest uppercase self-start transition duration-500 nav-link"
                 onClick={handleToggle}
               >
                 <motion.h1 style={{ x: hoverX, y: hoverY }} className="hollow-bg absolute">Resume</motion.h1>
                 Resume
-              </Link>
+              </a>
             </motion.li>
 
 
