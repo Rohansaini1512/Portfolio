@@ -2,6 +2,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 
 function Footer() {
+    // let year = new Date().getFullYear();
     return (
         <footer className="relative left-0 bottom-0 py-8 px-6 sm:px-20 flex flex-col sm:flex-row items-start sm:items-center justify-between text-white bg-gray-900">
             <section className="w-full sm:w-1/3 mb-6 sm:mb-0 flex flex-col gap-4">
@@ -23,7 +24,7 @@ function Footer() {
                     Current Availability
                 </h3>
                 <p className="text-lg text-[#727C57]">
-                    I usually dabble between multiple projects and opportunities but
+                    I usually dabble between multiple projects and opportunities <br /> but
                     I'll be happy to discuss any new ideas. Let's get in touch!
                 </p>
             </section>
@@ -43,6 +44,12 @@ function Footer() {
                     </a>
                 </div>
             </section>
+            {/* <div>
+                <div className="flex justify-center items-center gap-2">
+                    <FaRegCopyright className="text-[#727C57]"/>
+                    <p className="text-[#727C57]">Yogit Nainani {year} </p>
+                </div>
+            </div> */}
         </footer>
     );
 }
