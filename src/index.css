@@ -1,3 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+.hollow-text {
+    -webkit-text-stroke: 3px #fefffa; /* Adjust the stroke width and color as needed */
+    background-clip: text;
+    transition:all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .hollow-heading { 
+    transition:all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  ul:hover li .nav-link {
+    opacity: 0.1;
+  }
+  
+  ul li .nav-link:hover {
+    opacity: 1;
+  }
+  
+  ul li .nav-link .hollow-bg {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.25s;
+    font-size: 15rem;
+    z-index: -1;  
+    -webkit-text-stroke: 3px #fefffa; /* Adjust the stroke width and color as needed */
+    background-clip: text;
+    color: transparent;
+  }
+  
+  ul li .nav-link:hover .hollow-bg {
+    opacity: 1;
+  }
