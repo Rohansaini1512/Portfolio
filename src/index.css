@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body, #root, .App {
+  height: 100%;
+}
 
 :root {
     --foreground-rgb: 0, 0, 0;

@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
@@ -23,7 +24,7 @@ function HomeLayout({ children }) {
   };
 
   return (
-    <div className="w-full flex flex-col items-center fixed top-0 z-40">
+    <div className="w-full flex flex-col items-center min-h-screen">
       <div className="w-11/12 pt-8 flex flex-row justify-between items-center z-30">
         <div
           className="h-10 w-10 border-2 border-[#fefffa] text-[#fefffa] text-2xl flex justify-center items-center"
@@ -55,7 +56,6 @@ function HomeLayout({ children }) {
                 About
               </Link>
             </motion.li>
-            
 
             <motion.li onMouseMove={handleHover} className="mb-4">
               <Link
@@ -68,7 +68,6 @@ function HomeLayout({ children }) {
               </Link>
             </motion.li>
 
-
             <motion.li onMouseMove={handleHover} className="mb-4">
               <Link
                 to={"/skills"}
@@ -79,7 +78,6 @@ function HomeLayout({ children }) {
                 Skills
               </Link>
             </motion.li>
-
 
             <motion.li onMouseMove={handleHover} className="mb-4">
               <Link
@@ -92,10 +90,8 @@ function HomeLayout({ children }) {
               </Link>
             </motion.li>
 
-
             <motion.li onMouseMove={handleHover} className="mb-4">
               <a
-                // to={"/resume"}
                 href={"https://drive.google.com/file/d/1FO2lrB0-5tclNrm-AidszGTjwKcTEFLm/view?usp=drive_link"}
                 className="text-8xl leading-none text-[#fefffa] font-anton tracking-widest uppercase self-start transition duration-500 nav-link"
                 onClick={handleToggle}
@@ -104,7 +100,6 @@ function HomeLayout({ children }) {
                 Resume
               </a>
             </motion.li>
-
 
             <motion.li onMouseMove={handleHover} className="mb-4">
               <Link
@@ -120,7 +115,9 @@ function HomeLayout({ children }) {
         </motion.div>
       )}
 
-      {children}
+      <div className="w-full flex-grow overflow-auto">
+        {children}
+      </div>
 
       <Footer />
     </div>

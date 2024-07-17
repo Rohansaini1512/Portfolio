@@ -24,7 +24,7 @@ function Footer() {
                     Current Availability
                 </h3>
                 <p className="text-lg text-[#727C57]">
-                    I usually dabble between multiple projects and opportunities <br /> but
+                    I usually dabble between multiple projects and opportunities but
                     I'll be happy to discuss any new ideas. Let's get in touch!
                 </p>
             </section>
