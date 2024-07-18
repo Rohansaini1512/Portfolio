@@ -5,8 +5,8 @@ import { celebrities } from "../Components/CelebrityData";
 import ExperienceSection from "../Experience/Experiences";
 import HomeLayout from "../Layout/HomeLayout";
 import Typewriter from 'typewriter-effect';
-import { FaArrowRight } from "react-icons/fa";
-
+import { FaArrowRight } from "react-icons/fa"; 
+import { Link } from "react-router-dom";
 function Home() {
     const [toggle, setToggle] = useState(false);
 
@@ -58,10 +58,10 @@ function Home() {
                 <div className="text-2xl font-semibold text-center mb-7 tracking-widest">
                     WANNA WORK TOGETHER ?
                 </div>
-                <div className="text-8xl font-bold tracking-widest space-x-4 hover:underline inline-flex items-center">
+                <Link to="/connect" className="text-8xl font-bold tracking-widest space-x-4 hover:underline inline-flex items-center">
                     LET'S <span className="ml-4">CONNECT</span>
                     <FaArrowRight />
-                </div>
+                </Link>
             </div>
         </HomeLayout>
     );
