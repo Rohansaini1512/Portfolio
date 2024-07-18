@@ -1,15 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
 
-function HomeLayout({ children }) {
-  const [toggle, setToggle] = useState(false);
+function HomeLayout({ children, toggle, setToggle }) {
   const [hoverX, setHoverX] = useState(0);
   const [hoverY, setHoverY] = useState(0);
+
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [toggle]);
 
   const handleToggle = () => {
     setToggle(!toggle);

@@ -1,27 +1,35 @@
 /* eslint-disable react/no-unescaped-entities */
-// import ExperienceSection from "../Components/Card";
+import { useState } from "react";
 import CarouselSlide from "../Components/CarouselSlide";
 import { celebrities } from "../Components/CelebrityData";
 import ExperienceSection from "../Experience/Experiences";
 import HomeLayout from "../Layout/HomeLayout";
+import Typewriter from 'typewriter-effect';
 
 function Home() {
+    const [toggle, setToggle] = useState(false);
+
     return (
-        <HomeLayout>
+        <HomeLayout toggle={toggle} setToggle={setToggle}>
             <div className="flex flex-row items-center justify-center space-y-16 py-8">
-            <div className="w-full flex flex-col items-center text-center">
-                    <h1 className="text-4xl font-bold mb-4">About Myself</h1>
+                <div className="w-full flex flex-col items-center text-center">
+                    <h1 className="text-8xl font-bold mb-4 ">Hi, <br />I'm <span className="text-blue-500">Rohan</span>, <br />
+                        Web Developer
+                     </h1>
                     <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl">
                         <p className="text-lg leading-relaxed text-gray-700">
-                            Welcome to my portfolio. Here you'll find information about my background, 
-                            skills, and projects I've worked on. Feel free to browse through and 
-                            learn more about me!
+                        <Typewriter
+                            options={{
+                            strings: ['Hello!', 'Welcome to React Typewriter!', 'Enjoy typing effects.'],
+                            autoStart: true,
+                            loop: true,
+                            }}
+                        />
                         </p>
                     </div>
                 </div>
 
                 <div className="w-full flex flex-col items-center">
-                    {/* <h2 className="text-3xl font-semibold mb-8">My Projects</h2> */}
                     <div className="carousel w-1/2">
                         {celebrities && celebrities.map(celebrity => (
                             <CarouselSlide
@@ -34,14 +42,16 @@ function Home() {
                 </div>
             </div>
 
-            <div className="App min-h-screen  overflow-auto">
-                <div className="min-h-screen">
-                    <div className="text-center">
-                        <h1 className="text-9xl font-semibold mt-10 mb-10">Experience</h1>
+            {!toggle && (
+                <div className="App min-h-screen  overflow-auto">
+                    <div className="min-h-screen">
+                        <div className="text-center">
+                            <h1 className="text-9xl font-semibold mt-10 mb-10">Experience</h1>
+                        </div>
+                        <ExperienceSection />
                     </div>
-                    <ExperienceSection />
                 </div>
-            </div>
+            )}
         </HomeLayout>
     );
 }
