@@ -5,6 +5,7 @@ import { celebrities } from "../Components/CelebrityData";
 import ExperienceSection from "../Experience/Experiences";
 import HomeLayout from "../Layout/HomeLayout";
 import Typewriter from 'typewriter-effect';
+import { FaArrowRight } from "react-icons/fa";
 
 function Home() {
     const [toggle, setToggle] = useState(false);
@@ -43,15 +44,25 @@ function Home() {
             </div>
 
             {!toggle && (
-                <div className="App min-h-screen  overflow-auto">
+                <div className="App min-h-screen overflow-auto">
                     <div className="min-h-screen">
                         <div className="text-center">
-                            <h1 className="text-9xl font-semibold mt-10 mb-10">Experience</h1>
+                            <h1 className="text-9xl font-semibold mt-10 mb-5">Experience</h1>
                         </div>
                         <ExperienceSection />
                     </div>
                 </div>
             )}
+
+            <div className="flex flex-col items-center mt-5 mb-10">
+                <div className="text-2xl font-semibold text-center mb-7 tracking-widest">
+                    WANNA WORK TOGETHER ?
+                </div>
+                <div className="text-8xl font-bold tracking-widest space-x-4 hover:underline inline-flex items-center">
+                    LET'S <span className="ml-4">CONNECT</span>
+                    <FaArrowRight />
+                </div>
+            </div>
         </HomeLayout>
     );
 }

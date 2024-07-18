@@ -1,10 +1,8 @@
-// import React from 'react';
 import ExperienceCard from './ExperienceCard';
-import Gdsc from "../assets/GDSC.png"
 
 const experiences = [
   {
-    imgSrc: {Gdsc},
+    imgSrc: "path/to/Gdsc.png", // Updated the path to a string
     imgAlt: "Software Developer",
     tenure: "Aug 2023 - June 2024",
     position: "Cloud Lead",
@@ -24,7 +22,7 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <div className="flex flex-wrap justify-center mt-10 mb-10">
+    <div className="flex flex-wrap justify-center mt-10 mb-5"> {/* Decreased margin-bottom */}
       {experiences.map((exp, index) => (
         <div key={index} className="p-4 w-full md:w-1/2 lg:w-1/3">
           <ExperienceCard
