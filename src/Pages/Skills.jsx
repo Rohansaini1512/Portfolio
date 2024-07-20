@@ -2,6 +2,7 @@ import { FaCss3Alt, FaGithub, FaHtml5, FaJs, FaNodeJs } from "react-icons/fa6";
 import HomeLayout from "../Layout/HomeLayout";
 import { DiPython } from "react-icons/di";
 import { SiAmazonaws, SiC, SiCplusplus, SiDaisyui, SiDocker, SiExpress, SiGit, SiGo, SiGrafana, SiJenkins, SiKubernetes, SiLinux, SiMongodb, SiPostman, SiPrometheus, SiReact, SiTailwindcss } from "react-icons/si";
+import { useState } from "react";
 
 const lang = [
   { icon: <SiC className="text-red-600" />, label: 'C' },
@@ -51,8 +52,9 @@ const SkillIcon = ({ icon, label }) => (
 );
 
 function Skills() {
+    const [toggle, setToggle] = useState(false);
   return (
-    <HomeLayout>
+    <HomeLayout toggle={toggle} setToggle={setToggle}>
       <div className="flex flex-col items-center">
         <div className="text-6xl font-semibold text-center mb-8">
           Languages
