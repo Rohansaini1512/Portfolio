@@ -34,10 +34,10 @@ function HomeLayout({ children, toggle, setToggle }) {
   };
 
   return (
-    <div className="w-full flex flex-col items-center min-h-screen">
+    <div className="w-full flex flex-col items-center min-h-screen relative">
       <div className="w-11/12 pt-8 flex flex-row justify-between items-center z-30">
         <div
-          className="h-10 w-10 border-2 border-[#fefffa] text-[#fefffa] text-2xl flex justify-center items-center"
+          className="h-10 w-10 border-2 border-[#fefffa] text-[#fefffa] text-2xl flex justify-center items-center cursor-pointer"
           onClick={handleToggle}
         >
           <RxHamburgerMenu
@@ -53,8 +53,16 @@ function HomeLayout({ children, toggle, setToggle }) {
         </div>
       </div>
 
+      {/* Backdrop Overlay */}
       {toggle && (
-        <motion.div className="bg-[#0C0C0F] opacity-[99%] w-full min-h-screen absolute z-20 transition duration-1000 flex justify-center items-center">
+        <motion.div
+          className="fixed inset-0 bg-black opacity-50 z-20"
+          onClick={handleToggle}
+        />
+      )}
+
+      {toggle && (
+        <motion.div className="bg-[#0C0C0F] opacity-[99%] w-full min-h-screen absolute z-30 transition duration-1000 flex justify-center items-center">
           <ul className="">
             <motion.li onMouseMove={handleHover} className="mb-4">
               <Link
