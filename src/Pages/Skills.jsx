@@ -1,4 +1,4 @@
-import { FaCss3Alt, FaGithub, FaHtml5, FaJs, FaNodeJs } from "react-icons/fa6";
+import { FaCss3Alt, FaGithub, FaHtml5, FaJs, FaNode } from "react-icons/fa6";
 import HomeLayout from "../Layout/HomeLayout";
 import { DiPython } from "react-icons/di";
 import { SiAmazonaws, SiC, SiCplusplus, SiDaisyui, SiDocker, SiExpress, SiGit, SiGo, SiGrafana, SiJenkins, SiKubernetes, SiLinux, SiMongodb, SiPostman, SiPrometheus, SiReact, SiTailwindcss } from "react-icons/si";
@@ -22,7 +22,7 @@ const front = [
 
 const back = [
   { icon: <SiExpress className="text-gray-600" />, label: 'Express' },
-  { icon: <FaNodeJs className="text-green-600" />, label: 'Node.js' },
+  { icon: <FaNode className="text-green-600" />, label: 'Node.js' },
   { icon: <SiMongodb className="text-green-600" />, label: 'MongoDB' },
 ];
 
