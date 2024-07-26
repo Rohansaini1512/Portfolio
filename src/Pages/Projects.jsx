@@ -43,8 +43,8 @@ const Back = [
 
 const Cloud = [
     {
-        imgSrc: "Eks",
-        imgAlt: "EKS",
+        imgSrc: {Eks},
+        imgAlt: "EKs",
         repoURL: "https://github.com/Rohansaini1512/AWS/tree/main/ProjectHostOnEKS",
         name: "2048",
         description:

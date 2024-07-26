@@ -71,3 +71,37 @@ html, body, #root, .App {
   ul li .nav-link:hover .hollow-bg {
     opacity: 1;
   }
+
+ /* Drawer and overlay styles */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Ensure it's above other content */
+  display: none; /* Hidden by default */
+}
+
+.drawer-open .drawer-overlay {
+  display: block; /* Show overlay when drawer is open */
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px; /* Adjust as needed */
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%); /* Hide drawer by default */
+  transition: transform 0.3s ease;
+  z-index: 1000; /* Ensure it's above the overlay */
+}
+
+.drawer-open .drawer {
+  transform: translateX(0); /* Show drawer */
+}
+
