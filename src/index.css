@@ -4,104 +4,138 @@
 
 html, body, #root, .App {
   height: 100%;
+  margin: 0; /* Ensure no extra margin is added */
 }
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground-rgb: 255, 255, 255;
-      --background-start-rgb: 0, 0, 0;
-      --background-end-rgb: 0, 0, 0;
-    }
-  }
-  
-  ::-webkit-scrollbar {
-    display: none;
-  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 .hollow-text {
-    -webkit-text-stroke: 3px #fefffa; /* Adjust the stroke width and color as needed */
-    background-clip: text;
-    transition:all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-  
-  .hollow-heading { 
-    transition:all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .fadeIn {
-    animation: fadeIn 1.5s ease-out;
-  }
-  
-  ul:hover li .nav-link {
-    opacity: 0.1;
-  }
-  
-  ul li .nav-link:hover {
-    opacity: 1;
-  }
-  
-  ul li .nav-link .hollow-bg {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    opacity: 0;
-    transition: 0.25s;
-    font-size: 15rem;
-    z-index: -1;  
-    -webkit-text-stroke: 3px #fefffa; /* Adjust the stroke width and color as needed */
-    background-clip: text;
-    color: transparent;
-  }
-  
-  ul li .nav-link:hover .hollow-bg {
-    opacity: 1;
-  }
+  -webkit-text-stroke: 3px #fefffa;
+  background-clip: text;
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
- /* Drawer and overlay styles */
+.hollow-heading { 
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1.5s ease-out;
+}
+
+ul:hover li .nav-link {
+  opacity: 0.1;
+}
+
+ul li .nav-link:hover {
+  opacity: 1;
+}
+
+ul li .nav-link .hollow-bg {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.25s;
+  font-size: 15rem;
+  z-index: -1;  
+  -webkit-text-stroke: 3px #fefffa;
+  background-clip: text;
+  color: transparent;
+}
+
+ul li .nav-link:hover .hollow-bg {
+  opacity: 1;
+}
+
+/* Drawer and overlay styles */
 .drawer-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 999; /* Ensure it's above other content */
-  display: none; /* Hidden by default */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
 }
 
 .drawer-open .drawer-overlay {
-  display: block; /* Show overlay when drawer is open */
+  display: block;
 }
 
 .drawer {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px; /* Adjust as needed */
+  width: 300px;
   height: 100%;
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transform: translateX(100%); /* Hide drawer by default */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
   transition: transform 0.3s ease;
-  z-index: 1000; /* Ensure it's above the overlay */
+  z-index: 1000;
 }
 
 .drawer-open .drawer {
-  transform: translateX(0); /* Show drawer */
+  transform: translateX(0);
 }
 
+.drawer-toggle {
+  position: absolute;
+  top: 10px;
+  left: -50px;
+  background: #007bff;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.drawer-content {
+  padding: 20px;
+}
+
+/* Photo Boundary */
+.border-4 {
+  border-width: 4px;
+}
+
+.border-gray-300 {
+  border-color: #e2e8f0;
+}
+
+.bg-gray-200 {
+  background-color: #edf2f7;
+}
+
+/* Ensure no extra margin or padding on body */
+body {
+  margin: 0;
+  padding: 0;
+}
