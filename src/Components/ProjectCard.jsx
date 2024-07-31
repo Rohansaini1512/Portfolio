@@ -10,7 +10,7 @@ const ProjectCard = ({ imgSrc, imgAlt, repoURL, name, description, topics }) => 
 
   return (
     <div
-      className="relative w-full border border-[#727C57] flex rounded-sm z-20"
+      className="relative w-full border border-[#727C57] flex rounded-sm z-10"
       onMouseEnter={handleHover}
     >
       <div className="w-3/5">
