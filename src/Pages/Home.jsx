@@ -3,12 +3,15 @@ import ExperienceSection from "../Experience/Experiences";
 import HomeLayout from "../Layout/HomeLayout";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { FaRegImage } from "react-icons/fa";
+import my from "../assets/1.jpeg";
 
 function Home() {
   const [toggle, setToggle] = useState(false);
 
-  const dynamicText = "Hello! Welcome to my portfolio. I am a web developer with expertise in creating interactive and responsive web applications. Explore my projects and let's connect if you want to work together. Enjoy scrolling text.";
+  const dynamicText = "I am a DevOps Learning Engineer currently in my third year at IIIT Kota. My journey so far has equipped me with a solid foundation in both backend and frontend technologies, and I am always ready to learn new things and expand my skill set.";
+  const nextPara = " In addition to my technical expertise, I am a detail-oriented individual who takes pride in delivering high-quality work. My commitment to excellence is reflected in my portfolio, which showcases my ability to create user-friendly, functional, and visually appealing applications."
+  const third = "I am passionate about tackling complex challenges and continuously seek opportunities to grow both personally and professionally. Contact me today to learn more about how I can contribute to your project and help bring your ideas to life. Let's explore new possibilities together and achieve excellence in every endeavor."
+
 
   return (
     <HomeLayout toggle={toggle} setToggle={setToggle}>
@@ -21,7 +24,9 @@ function Home() {
             </h1>
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-md md:max-w-2xl mb-4"> {/* Adjusted margin-bottom */}
               <div className="w-full py-4 bg-gray-100 text-lg text-gray-700">
-                {dynamicText}
+                {dynamicText} <br /> <br />
+                {nextPara} <br /> <br />
+                {third}
               </div>
             </div>
           </div>
@@ -29,8 +34,8 @@ function Home() {
 
         <div className="w-full md:w-1/2 flex justify-center mb-0"> {/* Adjusted margin-bottom */}
           <div className="border-4 border-gray-300 rounded-lg p-4 max-w-md">
-            <div className="flex items-center justify-center h-64 w-64 bg-gray-200">
-              <FaRegImage className="text-gray-400 text-6xl" />
+            <div className="flex items-center justify-center h-96 w-64 bg-gray-200 overflow-hidden">
+              <img src={my} alt="Rohan" className="object-cover h-full w-full" />
             </div>
           </div>
         </div>
