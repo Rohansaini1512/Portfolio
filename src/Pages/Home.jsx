@@ -22,8 +22,8 @@ function Home() {
               Hi, <br />I'm <span className="text-blue-500">Rohan</span>, <br />
               Web Developer
             </h1>
-            <div className="bg-white p-6 rounded-lg shadow-lg max-w-md md:max-w-2xl mb-4"> {/* Adjusted margin-bottom */}
-              <div className="w-full py-4 bg-gray-100 text-lg text-gray-700">
+            <div className="bg-white p-6 rounded-lg shadow-lg max-w-md md:max-w-2xl mb-4 bg-blue-500"> {/* Adjusted margin-bottom */}
+              <div className="w-full py-4 bg-yellow-100 text-lg text-blue-900">
                 {dynamicText} <br /> <br />
                 {nextPara} <br /> <br />
                 {third}

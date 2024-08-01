@@ -1,21 +1,23 @@
 import ExperienceCard from './ExperienceCard';
+import GDSC from '../assets/GDSC.png';
+import cloud from '../assets/Cloud.png';
 
 const experiences = [
   {
-    imgSrc: "path/to/Gdsc.png",
+    imgSrc: GDSC,
     imgAlt: "Software Developer",
     tenure: "Aug 2023 - June 2024",
     position: "Cloud Lead",
     orgName: "Google Developer Student Clubs",
-    description: "Developed a web application using React and Node.js."
+    description: "As the Cloud Lead in GDSC, I guide and mentor students in leveraging cloud technologies to build innovative solutions. My role involves organizing workshops, facilitating hands-on projects, and fostering a collaborative learning environment."
   },
   {
-    imgSrc: "https://via.placeholder.com/150",
+    imgSrc: cloud,
     imgAlt: "Project Manager",
     tenure: "Feb 2019 - Dec 2020",
     position: "Facilitator",
     orgName: "Google Cloud Study Jam",
-    description: "Managed a team of 10 to deliver a project on time."
+    description: "As the facilitator of the Cloud Study Jam at my college, I led initiatives that significantly boosted our technical expertise, elevating our institution to Tier 1 status. My dedication and hard work have fostered a culture of excellence and innovation in cloud technologies."
   },
   // Add more experiences as needed
 ];
