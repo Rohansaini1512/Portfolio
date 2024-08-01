@@ -7,10 +7,14 @@ import ProjectCard from "../Components/ProjectCard";
 import { useState } from "react";
 import Eks from "../assets/2048.png"
 // import Heading from "../Components/Heading";
+import lms from "../assets/lms.png";
+import qissa from "../assets/qissa.png";
+import al from "../assets/alumni.png";
+import cost from "../assets/cost.png";
 
 const projects = [
   {
-    imgSrc: "Period.jpg",
+    imgSrc: lms,
     imgAlt: "Learning Managment System",
     repoURL: "https://github.com/Rohansaini1512/Learning-Managment-system",
     name: "LMS",
@@ -22,7 +26,7 @@ const projects = [
 
 const Back = [
     {
-        imgSrc: "Period.jpg",
+        imgSrc: qissa,
         imgAlt: "Qissa",
         repoURL: "https://github.com/404-GS-IIIT-Kota/404-GS-Qissa/tree/main/server",
         name: "Qissa",
@@ -31,7 +35,7 @@ const Back = [
         // topics: "https://skillicons.dev/icons?i=dart,flutter,materialui,firebase",
     },
     {
-        imgSrc: "Period.jpg",
+        imgSrc: al,
         imgAlt: "Alumni-Portal",
         repoURL: "https://github.com/HTC2-0/Alumni-Portal",
         name: "Alumni-Portal",
@@ -43,7 +47,7 @@ const Back = [
 
 const Cloud = [
     {
-        imgSrc: {Eks},
+        imgSrc: Eks,
         imgAlt: "EKs",
         repoURL: "https://github.com/Rohansaini1512/AWS/tree/main/ProjectHostOnEKS",
         name: "2048",
@@ -52,7 +56,7 @@ const Cloud = [
         // topics: "https://skillicons.dev/icons?i=dart,flutter,materialui,firebase",
     },
     {
-        imgSrc: "Period.jpg",
+        imgSrc: cost,
         imgAlt: "AWS-Lambda",
         repoURL: "https://github.com/Rohansaini1512/AWS/tree/main/Lambda_Function",
         name: "Cost Optimization",
