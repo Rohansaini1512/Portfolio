@@ -4,7 +4,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 function Footer() {
     // let year = new Date().getFullYear();
     return (
-        <footer className="relative left-0 bottom-0 py-8 px-6 sm:px-20 flex flex-col sm:flex-row items-start sm:items-center justify-between text-white ">
+        <footer className="relative left-0 bottom-0 py-8 px-6 sm:px-20 flex flex-col sm:flex-row items-start sm:items-center justify-between text-white gap-8">
             <section className="w-full sm:w-1/3 mb-6 sm:mb-0 flex flex-col gap-4">
                 <h3 className="text-[#fefffa] font-sourceSans text-3xl font-bold">
                     Contact Information
